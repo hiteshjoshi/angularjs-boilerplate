@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>myApp</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/shared/dev/1_modernizr.js"></script>
+  <script src="/shared/dev/2_angular.js"></script>
+  <script src="/shared/dev/3_angular-route.js"></script>
+  <script src="/shared/dev/4_jquery.js"></script>
+  <script src="/shared/dev/5_foundation.js"></script>
+  <script src="/shared/dev/6_foundation.offcanvas.js"></script>
+  <script src="/shared/dev/999_myApp.js"></script>
+  <link rel="stylesheet" href="/shared/dev/foundation.min.css"/>
+  <link rel="stylesheet" href="/shared/dev/normalize.css"/>
+  <link rel="stylesheet" href="/shared/dev/myApp.css"/>
+</head>
+<body>
+<div class="off-canvas-wrap">
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="tab-bar-section">
+        <h1 class="title">myApp</h1>
+        </section>
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+    </nav>
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Menu</label></li>
+        <li><a href="#/view1">view1</a></li>
+        <li><a href="#/view2">view2</a></li>
+       </ul>
+    </aside>
+    <section class="main-section">
+
+       <div ng-view></div>
+
+    </section>
+
+    <div class="footer text-center">Footer for myApp</div>
+
+    <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
+
+<script>
+    $(document).foundation();
+</script>
+
+</body>
+</html>

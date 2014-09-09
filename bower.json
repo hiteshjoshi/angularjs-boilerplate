@@ -1,0 +1,13 @@
+{
+  "name": "angular-boilerplate",
+  "description": "A starter myApp for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/andries.filmer/angular-boilerplate",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "foundation": "5.1.x"
+  }
+}

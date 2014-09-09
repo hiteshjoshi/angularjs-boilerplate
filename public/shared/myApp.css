@@ -1,0 +1,18 @@
+html, body, .off-canvas-wrap, .inner-wrap, .main-section {
+  height: 100%;
+}
+
+nav.tab-bar {
+  margin-bottom: -90px;
+}
+
+.main-section {
+  padding-top: 90px;
+}
+
+.footer {
+  height: 45px;
+  padding-top: 10px;
+  background: #333;
+  color: #fff;
+}
