@@ -1,26 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="<!-- @echo pkgname -->" class="no-js">
+<html lang="" ng-app="<!-- @echo pkgname -->" class="no-js">
 <head>
   <meta charset="utf-8">
   <title><!-- @echo pkgname --></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-  <script src="/shared/dev/1_modernizr.js"></script>
-  <script src="/shared/dev/2_angular.js"></script>
-  <script src="/shared/dev/3_angular-route.js"></script>
-  <script src="/shared/dev/4_jquery.js"></script>
-  <script src="/shared/dev/5_foundation.js"></script>
-  <script src="/shared/dev/6_foundation.offcanvas.js"></script>
-  <script src="/shared/dev/999_<!-- @echo pkgname -->.js"></script>
-  <link rel="stylesheet" href="/shared/dev/foundation.min.css"/>
-  <link rel="stylesheet" href="/shared/dev/normalize.css"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Place favicon.ico and apple-touch-icon(s) -->
+
+  <!-- CSS cdn's -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"/>
+  <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css"/>
+
+  <!-- JS cdn's -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://cdn.foundation5.zurb.com/foundation.js"></script>
+
+  <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+  <!-- CSS  & JS development <!-- @echo pkgname --> -->
+  <link rel="stylesheet" href="/shared/foundation-icons.css"/>
   <link rel="stylesheet" href="/shared/dev/<!-- @echo pkgname -->.css"/>
-<!-- @endif -->
-<!-- @if NODE_ENV == 'PRODUCTION' -->
+  <script src="/shared/dev/foundation.offcanvas.js"></script>
+  <script src="/shared/dev/<!-- @echo pkgname -->.js"></script>
+  <!-- @endif -->
+
+  <!-- @if NODE_ENV == 'PRODUCTION' -->
+  <!-- CSS  & JS production <!-- @echo pkgname --> -->
   <link rel="stylesheet" href="/shared/<!-- @echo pkgname -->.min.css"/>
   <script src="/shared/<!-- @echo pkgname -->.min.js"></script>
-<!-- @endif -->
+  <!-- @endif -->
+
+
 </head>
 <body>
 <div class="off-canvas-wrap">
@@ -46,7 +61,7 @@
 
     </section>
 
-    <div class="footer text-center">Footer for <!-- @echo pkgname --></div>
+    <div class="footer text-center fi-universal-access"> Footer for <!-- @echo pkgname --> </span></div>
 
     <a class="exit-off-canvas"></a>
 

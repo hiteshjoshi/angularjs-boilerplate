@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" class="no-js">
+<html lang="" ng-app="myApp" class="no-js">
 <head>
   <meta charset="utf-8">
   <title>myApp</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="/shared/dev/1_modernizr.js"></script>
-  <script src="/shared/dev/2_angular.js"></script>
-  <script src="/shared/dev/3_angular-route.js"></script>
-  <script src="/shared/dev/4_jquery.js"></script>
-  <script src="/shared/dev/5_foundation.js"></script>
-  <script src="/shared/dev/6_foundation.offcanvas.js"></script>
-  <script src="/shared/dev/999_myApp.js"></script>
-  <link rel="stylesheet" href="/shared/dev/foundation.min.css"/>
-  <link rel="stylesheet" href="/shared/dev/normalize.css"/>
-  <link rel="stylesheet" href="/shared/dev/myApp.css"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Place favicon.ico and apple-touch-icon(s) -->
+
+  <!-- CSS cdn's -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"/>
+  <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css"/>
+
+  <!-- JS cdn's -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://cdn.foundation5.zurb.com/foundation.js"></script>
+
+  <!-- CSS  & JS production myApp -->
+  <link rel="stylesheet" href="/shared/myApp.min.css"/>
+  <script src="/shared/myApp.min.js"></script>
 </head>
 <body>
 <div class="off-canvas-wrap">
@@ -40,7 +49,7 @@
 
     </section>
 
-    <div class="footer text-center">Footer for myApp</div>
+    <div class="footer text-center fi-universal-access"> Footer for myApp </span></div>
 
     <a class="exit-off-canvas"></a>
 

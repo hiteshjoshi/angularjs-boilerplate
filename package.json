@@ -2,6 +2,7 @@
   "name": "myApp",
   "version": "0.0.0",
   "devDependencies": {
+    "grunt-env": "~0.4.0",
     "grunt-preprocess": "~4.0.0",
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-cssmin": "~0.10.0",
@@ -13,8 +14,7 @@
     "grunt-contrib-connect": "~0.8.0"
   },
   "repository": {
-  "type": "git",
-  "url": "git://github.com/andriesfilmer/angular-boilerplate.git"
+    "//" : "To prevent error: 'No repository field yet.'"
   }
 }
 

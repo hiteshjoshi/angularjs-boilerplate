@@ -23,17 +23,11 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      // JS files in order 'x_name.js'
-      modernizr:        { src: 'bower_components/foundation/js/vendor/modernizr.js', dest: 'public/shared/dev/1_modernizr.js' },
-      angular_js:       { src: 'bower_components/angular/angular.js', dest: 'public/shared/dev/2_angular.js' },
-      angular_route_js: { src: 'bower_components/angular-route/angular-route.js', dest: 'public/shared/dev/3_angular-route.js'},
-      jquery_js:        { src: 'bower_components/jquery/dist/jquery.js', dest: 'public/shared/dev/4_jquery.js'},
-      foundation_js:    { src: 'bower_components/foundation/js/foundation.js', dest: 'public/shared/dev/5_foundation.js'},
-      founda_canvas_js: { src: 'bower_components/foundation/js/foundation/foundation.offcanvas.js', dest: 'public/shared/dev/6_foundation.offcanvas.js'},
+      // JS files 
+      foundation_canvas_js: { src: 'bower_components/foundation/js/foundation/foundation.offcanvas.js', dest: 'public/shared/dev/foundation.offcanvas.js'},
 
       // CSS files 
-      foundation_css:   { src: 'bower_components/foundation/css/foundation.min.css', dest: 'public/shared/dev/foundation.min.css'},
-      normalize_css:    { src: 'bower_components/foundation/css/normalize.css', dest: 'public/shared/dev/normalize.css'}
+      foundation_icons_css: { expand: true, flatten: true, src: 'bower_components/foundation-icon-fonts/foundation-icons.*', dest: 'public/shared/'},
     },
     sass: {
       dist: {
@@ -48,7 +42,7 @@ module.exports = function(grunt) {
     concat: {
       jsdev: {
         src: ['src/scripts/*.js'],
-        dest: 'public/shared/dev/999_<%= pkg.name %>.js'
+        dest: 'public/shared/dev/<%= pkg.name %>.js'
       },
       jsprod: {
         src: ['public/shared/dev/*.js'],
@@ -74,12 +68,15 @@ module.exports = function(grunt) {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */'
         },
         files: {
-          'public/shared/<%= pkg.name %>.min.css': ['public/shared/dev/*.css']
+          'public/shared/<%= pkg.name %>.min.css': ['public/shared/dev/*.css','public/shared/foundation-icons.css']
         }
       }
     },
     clean: {
-      dev: ["public/shared/dev"]
+      dev: ["public/shared/dev", 
+            "public/shared/foundation-icons.*", 
+            "public/shared/<%= pkg.name %>.js", 
+            "public/shared/<%= pkg.name %>.css"]
     },
     watch: {
       files: ['src/layout/*', 'src/scripts/*', 'src/styles/*'],
