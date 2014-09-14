@@ -6,6 +6,9 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "foundation-icon-fonts": "3.0.0"
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "foundation": "5.1.x",
+    "foundation-icon-fonts" : ""
   }
 }
